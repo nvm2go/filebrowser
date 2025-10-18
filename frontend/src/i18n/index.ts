@@ -23,8 +23,11 @@ import("dayjs/locale/sk");
 import("dayjs/locale/sv");
 import("dayjs/locale/tr");
 import("dayjs/locale/uk");
+import("dayjs/locale/vi");
 import("dayjs/locale/zh-cn");
 import("dayjs/locale/zh-tw");
+import("dayjs/locale/cs");
+import("dayjs/locale/nb");
 
 // All i18n resources specified in the plugin `include` option can be loaded
 // at once using the import syntax
@@ -99,9 +102,11 @@ export function detectLocale() {
     case /^tr\b/.test(locale):
       locale = "tr";
       break;
-    // ua wasnt a valid locale for ukraine
     case /^uk\b/.test(locale):
       locale = "uk";
+      break;
+    case /^vi\b/.test(locale):
+      locale = "vi";
       break;
     case /^sv-se\b/.test(locale):
     case /^sv\b/.test(locale):
@@ -109,6 +114,10 @@ export function detectLocale() {
       break;
     case /^nl-be\b/.test(locale):
       locale = "nl-be";
+      break;
+    case /^nb\b/.test(locale):
+    case /^no\b/.test(locale):
+      locale = "no";
       break;
     default:
       locale = "en";
