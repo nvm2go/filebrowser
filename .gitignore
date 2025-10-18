@@ -41,3 +41,7 @@ build/
 
 default.nix
 Dockerfile.dev
+
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
